@@ -1,9 +1,9 @@
 $font-1: "font-1", sans-serif;
 
-$color-1: #61dafb;
-$color-2: salmon;
-$color-3: #282c34;
+$color-1: black;
+$color-2: #ffe919;
 $white: rgb(243, 243, 243);
+$black: gray;
 
 @mixin verticalCenter {
   display: flex;
@@ -18,7 +18,7 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: $white;
+  background: $black;
   font-family: $font-1;
   // @include verticalCenter;
 }
@@ -27,5 +27,7 @@ li {
 }
 
 h1 {
-  margin-top: 5%;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: $color-2;
+  font-size: 3rem;
 }

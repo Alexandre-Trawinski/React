@@ -1,17 +1,21 @@
+import { NavLink } from "react-router-dom";
+import Star_Wars_Logo from "./Star_Wars_Logo.png";
 
 const Accueil = () => {
   return (
     <div className="accueil">
-        <div className="titre">
-            <h1>Bienvenue sur mon site</h1>
-        </div>
-        <div className="description">
-            <p>Ce site regoupe plusieurs informations sur l'univers Star Wars.</p>
-        </div>
-        <div className="footer">
-            <p>Ce site utilise l'api Star Wars SWAPI.</p>
-        </div>
-      
+      <h1>Accueil</h1>
+      <img src={Star_Wars_Logo} alt="Star_Wars_Logo" />
+      <li className="card-accueil">
+        <NavLink to="/personnages">
+          <div className="infos">
+            <h2>Personnages</h2>
+          </div>
+        </NavLink>
+      </li>
+      <div className="footer">
+        <p>Ce site utilise l'API SWAPI Star Wars.</p>
+      </div>
     </div>
   );
 };
