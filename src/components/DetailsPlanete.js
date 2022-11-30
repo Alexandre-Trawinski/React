@@ -1,18 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardDetailsPersonnages from "./CardDetailsPersonnages";
+import CardDetailsPlanetes from "./CardDetailsPlanets";
 
-const DetailsPersonnage = () => {
-    const [detailsPersonnage, setDetailsPersonnage] = useState();
+const DetailsPlanete = () => {
+    const [detailsPlanete, setDetailsPlanete] = useState();
     const { id } = useParams();
 
     useEffect(() => {
         if(id) {
         axios
-            .get(`https://swapi.dev/api/people/${id}/?format=json`)
+            .get(`https://swapi.dev/api/planets/${id}/?format=json`)
             .then((res) => {
-                setDetailsPersonnage(res.data)
+                setDetailsPlanete(res.data)
             });
         }
     },[id]);
@@ -21,8 +21,8 @@ const DetailsPersonnage = () => {
         <div className="personnages">
             <h1>Détails</h1>
             <ul>
-                {detailsPersonnage &&
-                <CardDetailsPersonnages id={detailsPersonnage} />
+                {detailsPlanete &&
+                <CardDetailsPlanetes id={detailsPlanete} />
                 }
                 
             </ul>
@@ -30,4 +30,4 @@ const DetailsPersonnage = () => {
     );
 };
 
-export default DetailsPersonnage;
+export default DetailsPlanete;

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Card = ({ personnage }) => {
+const CardPersonnages = ({ personnage }) => {
   const id = personnage.url.substr(29);
   return (
     <li className="card">
@@ -13,4 +13,4 @@ const Card = ({ personnage }) => {
   );
 };
 
-export default Card;
+export default CardPersonnages;

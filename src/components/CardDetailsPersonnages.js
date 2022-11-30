@@ -1,4 +1,4 @@
-const CardDetails = ({id}) => {
+const CardDetailsPersonnages = ({id}) => {
 
   return (
     <li className="card-details">
@@ -15,4 +15,4 @@ const CardDetails = ({id}) => {
   );
 };
 
-export default CardDetails;
+export default CardDetailsPersonnages;

@@ -13,6 +13,12 @@ const Navigation = () => {
         >
           <li>Personnages</li>
         </NavLink>
+        <NavLink
+          to="/planetes"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
+          <li>Planètes</li>
+        </NavLink>
       </ul>
     </div>
   );

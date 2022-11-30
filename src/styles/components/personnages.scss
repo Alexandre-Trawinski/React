@@ -8,3 +8,28 @@
     justify-content: center;
   }
 }
+
+.pagination {   
+  margin: 30px auto;
+  text-align: center;
+
+  li {
+    color: $color-1;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-left: 30px;
+    background-color: $color-2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+
+      &:hover {    
+          color: $color-2;
+          background-color: $color-1;
+      }
+  }
+
+}
+
