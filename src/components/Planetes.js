@@ -4,12 +4,26 @@ import CardPlanetes from "./CardPlanetes";
 
 const Planetes = () => {
   const [planetes, setPlanetes] = useState([]);
+  let [next, setNext] = useState("");
+  let [previous, setPrevious] = useState("");
 
   useEffect(() => {
-    axios
-      .get("https://swapi.dev/api/planets/?format=json")
-      .then((res) => setPlanetes(res.data.results));
+    fetchApiStarWars("https://swapi.dev/api/planets/?format=json")
   }, []);
+
+  let fetchApiStarWars = (req) => {
+    const asyncFunction = async () => {
+      try {
+        const res = await axios.get(req);
+        setPlanetes(res.data.results)
+        setNext(res.data.next);
+        setPrevious(res.data.previous);
+      } catch (error) {
+        return error;
+      }
+    }
+    asyncFunction();
+  }
 
   return (
     <div className="personnages">
@@ -18,6 +32,10 @@ const Planetes = () => {
         {planetes.map((planete, index) => (
           <CardPlanetes key={index} planete={planete} />
         ))}
+      </ul>
+      <ul className='pagination'>
+      { previous ? <li onClick={() => fetchApiStarWars(previous)}>Précédent</li> : ""}        
+        { next ? <li onClick={() => fetchApiStarWars(next)}>Suivant</li> : "" }       
       </ul>
     </div>
   );

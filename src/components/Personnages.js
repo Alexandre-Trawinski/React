@@ -37,7 +37,7 @@ const Personnages = () => {
         ))}
       </ul>
       <ul className='pagination'>
-      { previous ? <li onClick={() => fetchApiStarWars(previous)}>Précèdent</li> : ""}        
+      { previous ? <li onClick={() => fetchApiStarWars(previous)}>Précédent</li> : ""}        
         { next ? <li onClick={() => fetchApiStarWars(next)}>Suivant</li> : "" }       
       </ul>
 
