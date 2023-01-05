@@ -7,9 +7,17 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .favourite {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    cursor: pointer;
+    right: 15px;
+    color: white;
+  }
 }
 
-.pagination {   
+.pagination {
   margin: 30px auto;
   text-align: center;
 
@@ -25,11 +33,9 @@
     padding-right: 30px;
     border-radius: 10px;
 
-      &:hover {    
-          color: $color-2;
-          background-color: $color-1;
-      }
+    &:hover {
+      color: $color-2;
+      background-color: $color-1;
+    }
   }
-
 }
-

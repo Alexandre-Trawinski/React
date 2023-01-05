@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Favoris from "./pages/Fav";
 import Home from "./pages/Home";
 import LesDetailsPersonnage from "./pages/LesDetailsPersonnage";
 import LesDetailsPlanetes from "./pages/LesDetailsPlanetes";
@@ -12,8 +13,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/personnages" element={<LesPersonnages />} />
         <Route path="/personnages/:id" element={<LesDetailsPersonnage />} />
-        <Route path="/planetes" element={<LesPlanetes />}/>
+        <Route path="/planetes" element={<LesPlanetes />} />
         <Route path="/planetes/:id" element={<LesDetailsPlanetes />} />
+        <Route path="/favoris" element={<Favoris />} />
       </Routes>
     </BrowserRouter>
   );
